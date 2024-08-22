@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Moderne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prevMonth" class="nav-btn">←</button>
+                <div id="monthYear" class="month-year"></div>
+                <button id="nextMonth" class="nav-btn">→</button>
+            </div>
+            <div class="calendar-days">
+                <div>Dim</div><div>Lun</div><div>Mar</div><div>Mer</div>
+                <div>Jeu</div><div>Ven</div><div>Sam</div>
+            </div>
+            <div id="calendar"></div>
+        </div>
+        <div class="agenda-container">
+            <h2>Agenda</h2>
+            <div id="agendaContent"></div>
+            <div class="task-input-container">
+                <input type="text" id="taskInput" placeholder="Ajouter une tâche">
+                <button id="addTaskBtn" class="add-btn">Ajouter</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

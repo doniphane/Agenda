@@ -1,0 +1,166 @@
+/* Styles simplifiés pour le calendrier et l'interface utilisateur */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.calendar-container, .agenda-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.month-year {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.nav-btn:hover {
+    background-color: #45a049;
+}
+
+.calendar-days {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.calendar-days div {
+    width: 14.28%;
+    text-align: center;
+    color: #333;
+}
+
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#calendar div {
+    width: 14.28%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#calendar div:hover {
+    background-color: #e0f7e0;
+    transform: scale(1.05);
+}
+
+#calendar .selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#calendar div.has-task {
+    background-color: #07a4d0;
+    position: relative;
+}
+
+#calendar div.has-task::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.agenda-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#agendaContent {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.task-input-container {
+    display: flex;
+    gap: 10px;
+}
+
+input#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+button#addTaskBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button#addTaskBtn:hover {
+    background-color: #45a049;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .calendar-container, .agenda-container {
+        width: 48%;
+    }
+}
