@@ -49,4 +49,4 @@ CREATE TABLE tasks (
 ## Captures d'écran
 
 ### Affichage du Calendrier
-![Affichage du Calendrier](screenshots/calendar_view.png)
+![Affichage du Calendrier](screenshots/calendar_view.png.png)
